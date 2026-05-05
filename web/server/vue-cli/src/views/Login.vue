@@ -272,7 +272,7 @@ function oauth(provider) {
       success.value = false;
       error.value = false;
 
-      router.push({ path: url });
+      window.location.href = url;
     } else {
       errorMsg.value = `Server returned an invalid URL: ${url}`;
       error.value = true;
