@@ -625,11 +625,12 @@ time a server is connected to, users can pre-configure their credentials to be
 used in authentication.
 
 You can pass the credential used as a password or personal access token
+in the `.codechecker.password.json` or
 directly in the `CC_PASSWORD` environment variable.
 If this environment variable is set, the credentials
 described in `.codechecker.password.json` will be ignored.
 
-If you wish to provide (multiple different) credentials is a password configuration file,
+If you wish to provide (multiple different) credentials in a password configuration file,
 first copy the `config/session_client.json` file from the CodeChecker
 package to your home directory and rename it to `.codechecker.passwords.json`
 After creating the new file open `~/.codechecker.passwords.json`.
@@ -663,7 +664,7 @@ Is it possible to generate a token from command line which can be used to
 authenticate in the name of the given user. This way no need to store passwords
 in text files. For more information [see](#personal-access-token).
 
-Furthermore, the location of the session file can be configured by the
+The location of the session file can be configured by the
 `CC_SESSION_FILE` environment variable. This can be useful if CodeChecker does
 not have the permission to create a session file under the user's home
 directory (e.g. in some CI environments).
