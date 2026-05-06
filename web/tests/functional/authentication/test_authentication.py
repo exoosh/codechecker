@@ -562,6 +562,10 @@ class DictAuth(unittest.TestCase):
         self.assertTrue(login_response,
                         "Server reported successful authentication")
 
+        logout_cmd = [env.codechecker_cmd(), 'cmd', 'login', 'cc',
+                      '-d', '--url', env.parts_to_url(codechecker_cfg)]
+        subprocess.check_output(
+            logout_cmd, env=my_env, encoding="utf-8", errors="ignore")
         # Login with wrong password
         my_env["CC_PASSWORD"] = "wrong"
 
