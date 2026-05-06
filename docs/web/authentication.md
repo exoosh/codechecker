@@ -664,6 +664,9 @@ Is it possible to generate a token from command line which can be used to
 authenticate in the name of the given user. This way no need to store passwords
 in text files. For more information [see](#personal-access-token).
 
+The location of the password file can be configured by the `CC_PASS_FILE`
+environment variable.
+
 The location of the session file can be configured by the
 `CC_SESSION_FILE` environment variable. This can be useful if CodeChecker does
 not have the permission to create a session file under the user's home
